@@ -1,4 +1,4 @@
-package by.epam.task1.controller.commmand;
+package by.epam.task1.controller.command;
 
 public interface Command {
 	void execute(String attribute);

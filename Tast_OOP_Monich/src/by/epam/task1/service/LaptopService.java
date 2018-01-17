@@ -1,35 +1,34 @@
 package by.epam.task1.service;
 
+import java.util.List;
+
 import by.epam.task1.bean.Laptop;
 
 public interface LaptopService {
 	
-	void getLaptopsByBattetyCapacityLess(float battetyCapacity);
-	void getLaptopsByBattetyCapacityMore(float battetyCapacity);
-	void getLaptopsByBattetyCapacity(float bottomLineOfBattetyCapacity, float topLineOfBattetyCapacity);
+	List<Laptop> getLaptopsByBattetyCapacityLess(float battetyCapacity);
+	List<Laptop> getLaptopsByBattetyCapacityMore(float battetyCapacity);
+	List<Laptop> getLaptopsByBattetyCapacity(float bottomLineOfBattetyCapacity, float topLineOfBattetyCapacity);
 	
-	void getLaptopsByOperatingSystem(String operatingSytemName);
+	List<Laptop> getLaptopsByOperatingSystem(String operatingSytemName);
 	
-	void getLaptopsByMemoryROMLess(int powerConsumption);
-	void getLaptopsByMemoryROMMore(int powerConsumption);
-	void getLaptopsByMemoryROM(int bottomLineOfMemoryROM, int topLineOfMemoryROM);
+	List<Laptop> getLaptopsByMemoryROMLess(int memoryROM);
+	List<Laptop> getLaptopsByMemoryROMMore(int memoryROM);
+	List<Laptop> getLaptopsByMemoryROM(int bottomLineOfMemoryROM, int topLineOfMemoryROM);
 	
-	void getLaptopsBySystemMemoryLess(int systemMemory);
-	void getLaptopsBySystemMemoryMore(int systemMemory);
-	void getLaptopsBySystemMemory(int bottomLineOfSystemMemory, int topLineOfSystemMemory);
+	List<Laptop> getLaptopsBySystemMemoryLess(int systemMemory);
+	List<Laptop> getLaptopsBySystemMemoryMore(int systemMemory);
+	List<Laptop> getLaptopsBySystemMemory(int bottomLineOfSystemMemory, int topLineOfSystemMemory);
 	
-	void getLaptopsByFrequencyCPULess(int frequencyCPU);
-	void getLaptopsByFrequencyCPUMore(int frequencyCPU);
-	void getLaptopsByFrequencyCPU(int bottomLineOfFrequencyCPU, int topLineOfFrequencyCPU);
 	
-	void getLaptopsByFrequencyCPULess(float frequencyCPU);
-	void getLaptopsByFrequencyCPUMore(float frequencyCPU);
-	void getLaptopsByFrequencyCPU(float bottomLineOfFrequencyCPU, float topLineOfFrequencyCPU);
 	
-	void getLaptopsByDisplayInchesLess(int displayInches);
-	void getLaptopsByDisplayInchesMore(int displayInches);
-	void getLaptopsByDisplayInches(int bottomLineOfDisplayInches, int topLineOfDisplayInches);
+	List<Laptop> getLaptopsByFrequencyCPULess(float frequencyCPU);
+	List<Laptop> getLaptopsByFrequencyCPUMore(float frequencyCPU);
+	List<Laptop> getLaptopsByFrequencyCPU(float bottomLineOfFrequencyCPU, float topLineOfFrequencyCPU);
 	
-	Laptop buildLaptop(String attribute);
+	List<Laptop> getLaptopsByDisplayInchesLess(int displayInches);
+	List<Laptop> getLaptopsByDisplayInchesMore(int displayInches);
+	List<Laptop> getLaptopsByDisplayInches(int bottomLineOfDisplayInches, int topLineOfDisplayInches);
+	
 		
 }

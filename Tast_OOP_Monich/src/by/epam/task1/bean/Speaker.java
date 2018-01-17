@@ -1,7 +1,11 @@
 package by.epam.task1.bean;
 
-public class Speaker {
+import java.io.Serializable;
+
+public class Speaker implements Serializable{
 	
+	
+	private static final long serialVersionUID = 1L;
 	public int powerConsumtion;
 	public int numberOfSpeakers;
 	public float minFrequencyRangeValue;
@@ -17,12 +21,28 @@ public class Speaker {
 		this.maxFrequencyRangeValue = maxFrequencyRangeValue;
 		this.cordLength = cordLength;
 	}
-
 	
+	
+	
+
+
+
+
+
+	public Speaker() {
+		super();
+		
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
 	public int getPowerConsumtion() {
 		return powerConsumtion;
 	}
-
+	
 	
 	public void setPowerConsumtion(int powerConsumtion) {
 		this.powerConsumtion = powerConsumtion;
@@ -66,6 +86,58 @@ public class Speaker {
 	
 	public void setCordLength(int cordLength) {
 		this.cordLength = cordLength;
+	}
+
+
+
+
+
+
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + cordLength;
+		result = prime * result + Float.floatToIntBits(maxFrequencyRangeValue);
+		result = prime * result + Float.floatToIntBits(minFrequencyRangeValue);
+		result = prime * result + numberOfSpeakers;
+		result = prime * result + powerConsumtion;
+		return result;
+	}
+
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Speaker other = (Speaker) obj;
+		if (cordLength != other.cordLength)
+			return false;
+		if (Float.floatToIntBits(maxFrequencyRangeValue) != Float.floatToIntBits(other.maxFrequencyRangeValue))
+			return false;
+		if (Float.floatToIntBits(minFrequencyRangeValue) != Float.floatToIntBits(other.minFrequencyRangeValue))
+			return false;
+		if (numberOfSpeakers != other.numberOfSpeakers)
+			return false;
+		if (powerConsumtion != other.powerConsumtion)
+			return false;
+		return true;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Speaker [powerConsumtion=" + powerConsumtion + ", numberOfSpeakers=" + numberOfSpeakers
+				+ ", minFrequencyRangeValue=" + minFrequencyRangeValue + ", maxFrequencyRangeValue="
+				+ maxFrequencyRangeValue + ", cordLength=" + cordLength + "]";
 	}
 	
 	

@@ -1,4 +1,4 @@
-package by.epam.task1.controller.commmand.enums;
+package by.epam.task1.controller.command.enums;
 
 public enum CommandName {
 	GET_OVENS,

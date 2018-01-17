@@ -1,27 +1,31 @@
 package by.epam.task1.bean;
 
-public class Oven {
-	public int powerConsumtion;
-	public int weight;
-	public int capacity;
-	public int depth;
+import java.io.Serializable;
+
+public class Oven implements Serializable{
 	
-	public Oven(int powerConsumtion, int weight, int capacity, int depth) {
+	private static final long serialVersionUID = 1L;
+	private int powerConsumtion;
+	private int weight;
+	private int capacity;
+	private float depth;
+	private float height;
+	private float width;
+
+
+	public Oven() {
+		super();
+	}
+
+	public Oven(int powerConsumtion, int weight, int capacity, float depth, float height, float width) {
 		super();
 		this.powerConsumtion = powerConsumtion;
 		this.weight = weight;
 		this.capacity = capacity;
 		this.depth = depth;
+		this.height = height;
+		this.width = width;
 	}
-	
-	
-
-	
-	
-	public Oven() {
-		super();
-	}
-
 
 
 
@@ -29,40 +33,69 @@ public class Oven {
 		return powerConsumtion;
 	}
 
-	
+
 	public void setPowerConsumtion(int powerConsumtion) {
 		this.powerConsumtion = powerConsumtion;
 	}
 
-	
+
 	public int getWeight() {
 		return weight;
 	}
 
-	
+
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
 
-	
 	public int getCapacity() {
 		return capacity;
 	}
-
 	
 	public void setCapacity(int capacity) {
 		this.capacity = capacity;
 	}
-
 	
-	public int getDepth() {
+	public float getDepth() {
 		return depth;
 	}
-
 	
-	public void setDepth(int depth) {
+	public void setDepth(float depth) {
 		this.depth = depth;
 	}
+	
+	public float getHeight() {
+		return height;
+	}
+	
+	public void setHeight(float height) {
+		this.height = height;
+	}
+	
+	public float getWidth() {
+		return width;
+	}
+	
+	public void setWidth(float width) {
+		this.width = width;
+	}
+	
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Oven [powerConsumtion=" + powerConsumtion + ", weight=" + weight + ", capacity=" + capacity + ", depth="
+				+ depth + ", height=" + height + ", width=" + width + "]";
+	}
+	
+	
+
+
+	
+	
 	
 	
 	
